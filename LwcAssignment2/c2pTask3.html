@@ -1,0 +1,8 @@
+<template>
+    <lightning-card title="Parent Component">
+        <div class="slds-m-around_medium">
+            <p>Message from Child Component: {childMessage}</p>
+            <c-c2p-task3-child onmessagechange={handleMessageChange}></c-c2p-task3-child>
+        </div>
+    </lightning-card>
+</template>
