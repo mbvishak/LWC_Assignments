@@ -1,7 +1,7 @@
 import { LightningElement, wire, api } from 'lwc';
 import getContactsByAccountId from '@salesforce/apex/ContactController.getContactsByAccountId';
 
-export default class ContactList extends LightningElement {
+export default class LWCAssDay4 extends LightningElement {
     @api recordId; // This will hold the Account ID
     contacts; // To hold the fetched contacts
     error; // To handle any errors
