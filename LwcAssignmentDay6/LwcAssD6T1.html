@@ -1,0 +1,20 @@
+<template>
+    <lightning-card title="Contact Details">
+        <div  class="slds-var-m-around_medium" >
+
+        <template if:true={contacts.data}>
+            <ul class="contact-list">
+                <template for:each={contacts.data} for:item="contact">
+                    <li key={contact.Id} class="contact-item">
+                        <span class="bullet"></span>
+                        <span class="contact-name"> Contact Name: </span>{contact.Name}
+                    </li>
+                </template>
+            </ul>
+        </template>
+        <template if:true={contacts.error}>
+            <p>{contacts.error}</p>
+        </template>
+        </div>
+    </lightning-card>
+</template>
