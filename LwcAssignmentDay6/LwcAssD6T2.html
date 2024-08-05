@@ -1,1 +1,19 @@
 
+<template>
+    <lightning-card title="Contact Search" icon-name="standard:contact">
+        <lightning-input 
+            label="Search Contacts"
+            value={searchKey} 
+            onchange={handleSearchKeyChange} 
+            placeholder="Enter First Name, Last Name or Email">
+        </lightning-input>
+        <template if:true={contacts.data}>
+            <lightning-datatable 
+                key-field="id"
+                data={contacts.data} 
+                columns={columns} 
+                hide-checkbox-column="true">
+            </lightning-datatable>
+        </template>
+    </lightning-card>
+</template>
