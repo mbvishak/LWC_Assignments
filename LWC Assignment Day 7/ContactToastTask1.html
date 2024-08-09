@@ -1,0 +1,22 @@
+<template>
+    <lightning-card title="Create Contact">
+        <div class="slds-m-around_medium">
+            <lightning-record-edit-form object-api-name="Contact" onsuccess={handleSaveSuccess}>
+                <lightning-combobox name="account" label="Account" value={selectedAccountId} placeholder="Select Accounts" options={accounts} onchange={handleAccountChange}>
+                </lightning-combobox>
+                <template if:true={selectedAccountId}>
+                    <lightning-input-field field-name="AccountId" value={selectedAccountId}></lightning-input-field>
+                </template>
+                <lightning-input-field field-name="LastName"></lightning-input-field>
+                <lightning-input-field field-name="Title"></lightning-input-field>
+                <lightning-input-field field-name="Email"></lightning-input-field>
+                <lightning-input-field field-name="Phone"></lightning-input-field>
+                <lightning-button
+                    label="Save"
+                    variant="brand"
+                    type="submit">
+                </lightning-button>
+            </lightning-record-edit-form>
+        </div>
+    </lightning-card>
+</template>
