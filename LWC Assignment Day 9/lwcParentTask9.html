@@ -1,0 +1,9 @@
+<template>
+    <lightning-card title="Task 9" variant="narrow" label="I'm Parent">
+        <div class="slds-p-around_medium"> <!-- Adds padding around the content -->
+            I'm Parent<br/>
+                <p>Selected Resource URL: {resourceUrl}</p><br/>
+            <c-lwc-child-task9 onresourceurlchange={handleResourceUrlChange}></c-lwc-child-task9>
+        </div>
+    </lightning-card>
+</template>
