@@ -1,0 +1,18 @@
+<template>
+    <lightning-card title="Account List">
+        <div class="slds-m-around_medium">
+            <template for:each={accounts} for:item="account">
+                <div key={account.Id} class="slds-box slds-m-bottom_small slds-grid slds-grid_align-spread">
+                    <p class="slds-text-body_regular">{account.Name}</p>
+                    <lightning-button label="Show" onclick={handleShowClick} data-id={account.Id}></lightning-button>
+                </div>
+            </template>
+        </div>
+    </lightning-card>
+
+    <c-act-modal1 
+        if:true={isModalOpen} 
+        account-details={selectedAccount}
+        onclose={closeModal}>
+    </c-act-modal1>
+</template>
